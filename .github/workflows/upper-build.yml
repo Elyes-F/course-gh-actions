@@ -25,10 +25,10 @@ jobs:
       # - run: go mod download
       #   working-directory: upper
       - run: |
-        ls
-        go build
-        ls
-        go test
-        ./upper foo the bar
-      #   working-directory: upper
-      #   name: build and test
+          ls
+          go build
+          ls
+          go test
+          ./upper foo the bar
+        working-directory: upper
+        # name: build and test
