@@ -9,9 +9,9 @@ on:
 
 jobs:
   build:
-    # runs-on: self-hosted
-    runs-on: macos-latest
-    # runs-on: ubuntu-latest
+    runs-on: self-hosted
+    # runs-on: macos-latest
+    # runs-on: ubuntu-latestInvoke-WebRequest -Uri https://github.com/actions/runner/releases/download/v2.335.1/actions-runner-win-x64-2.335.1.zip -OutFile actions-runner-win-x64-2.335.1.zip
     steps:
       - run: pwd && ls -al
       - uses: actions/checkout@v4

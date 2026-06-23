@@ -64,5 +64,8 @@ obj/
 # Go workspace file
 go.work
 
+# Action runner files
+/action-runner
+
 # End of https://www.toptal.com/developers/gitignore/api/go
 
