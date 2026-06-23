@@ -13,9 +13,9 @@ jobs:
     # runs-on: macos-latest
     # runs-on: ubuntu-latestInvoke-WebRequest -Uri https://github.com/actions/runner/releases/download/v2.335.1/actions-runner-win-x64-2.335.1.zip -OutFile actions-runner-win-x64-2.335.1.zip
     steps:
-      - run: pwd; ls -al
+      - run: Get-Location; Get-ChildItem -Force
       - uses: actions/checkout@v4
-      - run: pwd; ls -al
+      - run: Get-Location; Get-ChildItem -Force
       # - run: go version
       - uses: actions/setup-go@v5
         with:
