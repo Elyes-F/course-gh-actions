@@ -9,11 +9,10 @@ on:
 
 jobs:
   capture:
-    # strategy:
-    #   matrix:
-    #     os: [ ubuntu-latest, windows-latest, macos-latest ]
-    # runs-on: ${{ matrix.os }}
-    runs-on: macos-latest
+    strategy:
+      matrix:
+        os: [ ubuntu-latest, windows-latest, macos-latest ]
+    runs-on: ${{ matrix.os }}
     defaults:
       run:
         working-directory: upper
@@ -31,6 +30,5 @@ jobs:
         with:
           # path: ./upper/upper*
           path: ./upper/upper
-          name: build
-          # name: "build-${{ matrix.os }}"
+          name: "build-${{ matrix.os }}"
 
