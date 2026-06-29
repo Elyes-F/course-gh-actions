@@ -24,7 +24,7 @@ jobs:
       - uses: docker/login-action@v3
         with:
           registry: ghcr.io
-          username: ${{ github.repository_owner }} # g0t4
+          username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - run: docker tag upper ghcr.io/g0t4/upper:latest
       - run: docker tag upper ghcr.io/g0t4/upper:${{ github.ref_name }}
