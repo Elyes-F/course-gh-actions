@@ -1,5 +1,5 @@
 #!/bin/bash
 
-
-./build-only.sh
+set -e
+bash ./build-only.sh
 docker compose push
