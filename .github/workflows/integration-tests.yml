@@ -20,8 +20,8 @@ jobs:
   testing:
     runs-on: ubuntu-latest
     needs: generate
-    # container:
-    #   image: mysql:8.4
+    container:
+      image: mysql:8.4
     # services:
     #   mysqlserver:
     #     image: mysql:8.4
@@ -31,7 +31,7 @@ jobs:
     #     options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
     steps:
       - run: echo "${{ needs.generate.outputs.RANDOM_PASSWORD }}"
-      # - run: mysql --version
+      - run: mysql --version
       # - run: mysql -h mysqlserver -u root -p${{ needs.generate.outputs.RANDOM_PASSWORD }} -e "SHOW DATABASES;"
       # - run: echo "job.services= ${{ toJson(job.services)}}"
       # - run: echo "job.container= ${{ toJson(job.container)}}"
